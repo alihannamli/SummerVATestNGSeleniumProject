@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Vytrack automation" verbose="1">
+
+<!--    HOW TO RUN SPECIFIC PACKAGE(S)-->
+
+    <test name="Vytrack smoke test">
+        <packages>
+            <package name="com.cybertek.tests.d8_select_list"></package>
+            <package name="com.cybertek.tests.d9_tabs_frames_alerts_popups"/>
+        </packages>
+    </test>
+</suite>
+
