@@ -18,6 +18,9 @@ public class ImplicitWaitTest {
         driver.manage().window().maximize();
         //wait when trying to find the element
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        //wait while the page is loading
+        driver.manage().timeouts().pageLoadTimeout(30,TimeUnit.SECONDS);
     }
 
     @AfterMethod
@@ -29,7 +32,7 @@ public class ImplicitWaitTest {
     @Test
     public void test1() {
         driver.get("http://practice.cybertekschool.com/dynamic_loading/4");
-        System.out.println(driver.findElement(By.id("finish")).getText());
+        System.out.println(driver.findElement(By.id("finasdasdish")).getText());
     }
     @Test
     public void test2(){
