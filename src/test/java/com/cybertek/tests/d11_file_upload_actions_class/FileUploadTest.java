@@ -48,8 +48,8 @@ public class FileUploadTest {
         String projectPath = System.getProperty("user.dir");
 
         // location of the file within the project
-        String relativePath = "/src/test/resources/test_file.txt";
-       // location of the file within the project
+        String relativePath = "/src/test/resources/test_file.txt"; //we need to add '/' at the beginning.
+        // location of the file within the project
         String fullPath = projectPath+relativePath;
 
         driver.findElement(By.id("file-upload")).sendKeys(fullPath);
