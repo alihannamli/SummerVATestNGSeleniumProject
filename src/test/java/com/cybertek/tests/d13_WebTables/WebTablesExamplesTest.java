@@ -104,10 +104,22 @@ public class WebTablesExamplesTest {
         //get number of columns
         int colNumber = getNumberOfCols();
 
+        //iterates each row in the table
+        for(int i = 0; i <=rowNumber; i++){
+
+            for (int j = 0; j <= colNumber; j++){
+                // i --> index of tr(row)
+                //j --> index of rd(cell)
+            //    String xpath = "//table[@id='table1']/tbody/tr["+i+"]/td["+j+"]";
+             //   WebElement cell = driver.findElement(By.xpath(xpath));
+            //    System.out.println(cell.getText());
+            }
+        }
+
     }
 
     private int getNumberOfCols() {
-        List<WebElement> headers = driver.findElements(By.xpath("//table[@id='table1']/th"));
+        List<WebElement> headers = driver.findElements(By.xpath("//table[@id='table1']//th"));
         return headers.size();
     }
 
@@ -115,5 +127,28 @@ public class WebTablesExamplesTest {
     private int getNumberOfRows() {
         List<WebElement> allRowsExludingHeaders = driver.findElements(By.xpath("//table[@id='table1']/tbody/tr"));
         return allRowsExludingHeaders.size();
+    }
+
+    @Test
+    public void getSpecificCellByIndex(){
+        //get cell by given
+        int r = 1; // row number
+        int c = 1; // col number
+
+        String path = "//table[@id='table1']/tbody/tr["+r+"]/td["+c+"]";
+        WebElement cell = driver.findElement(By.xpath(path));
+        System.out.println(cell.getText());
+
+    }
+
+    @Test
+    public void getCellInRelationToAnotherLine(){
+
+        // get eamil of Jason
+        // email is in the 3rd column
+        String name = "Jason";
+        String xpath = "//table[@id='table1']//td[.='Jason']/../td[3]";
+        System.out.println(driver.findElement(By.xpath(xpath)).getText());
+
     }
 }
