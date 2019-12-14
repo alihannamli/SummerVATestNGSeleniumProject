@@ -41,7 +41,6 @@ public class SingletonTest {
         // we use this method to close the driver
         Driver.closeDriver();
 
-        // 1;31;0 de kaldim
     }
 
 }
