@@ -1,12 +1,14 @@
 package com.cybertek.Pages;
 
+import com.cybertek.utilities.Driver;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-import java.sql.Driver;
-
 public class LoginPage {
-    public LoginPage(){
-      //  PageFactory.initElements(Driver.get(), this);
+
+    public LoginPage() {
+
+        PageFactory.initElements(Driver.get(), this);
     }
 }
 
