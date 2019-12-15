@@ -33,6 +33,7 @@ public class RepeatOptionsTest extends TestBase {
         // click on repeat
         CreateCalendarEventsPage createCalendarEventsPage = new CreateCalendarEventsPage();
         calendarEventsPage.waitUntilLoaderScreenDisappear();
+        BrowserUtils.waitFor(1);
         createCalendarEventsPage.repeat.click();
 
         // verify that repeat every days is checked
