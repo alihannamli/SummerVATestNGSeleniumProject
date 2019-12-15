@@ -3,6 +3,8 @@ package com.cybertek.tests.d15_page_object_model_based_tests;
 import com.cybertek.Pages.LoginPage;
 import com.cybertek.tests.TestBase;
 import com.cybertek.utilities.ConfigurationReader;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -29,4 +31,6 @@ public class NegativeLoginTests extends TestBase {
 
         Assert.assertEquals(driver.getCurrentUrl(), "https://qa2.vytrack.com/user/login");
     }
+
+
 }

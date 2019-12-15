@@ -11,7 +11,7 @@ public class PositiveLoginTest extends TestBase {
     public void loginAsDriver(){
 
         LoginPage loginPage = new LoginPage();
-        loginPage.username.sendKeys("driver101");
+        loginPage.username.sendKeys("user2");
         loginPage.password.sendKeys("UserUser123");
         loginPage.submit.click();
 
