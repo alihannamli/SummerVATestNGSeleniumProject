@@ -27,6 +27,7 @@ public class PageSubtitlesTest extends TestBase {
         Assert.assertEquals(actual, "Calendar Events");
 
         // opt + cmd + <--(arrow left)== go back to previous location of the mouse
+        // opt + cmd + -->(arrow right)== come back from the place where you went back
 
 
 
